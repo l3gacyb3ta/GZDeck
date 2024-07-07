@@ -19,5 +19,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Build/release Electron app
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Electron app
         run: yarn package
