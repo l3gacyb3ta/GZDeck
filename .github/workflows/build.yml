@@ -26,3 +26,9 @@ jobs:
         run: yarn package
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out
